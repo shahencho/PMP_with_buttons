@@ -13,7 +13,7 @@ export class MessagesService {
 
   async createMessage(dto: MessagesDto) {
     const reqExternalMessages = await this.externalMessages.sendMessage(dto);
-
+    console.log(reqExternalMessages);
     // return this.messageRepository.create(dto);
   }
 

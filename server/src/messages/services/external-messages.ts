@@ -9,6 +9,7 @@ export class ExternalMessages {
 
   async sendMessage(dto: MessagesDto) {
     const { externalReceiverEmail } = dto;
+    console.log(externalReceiverEmail);
     const sentEmail = await this.mailService.sendMail({
       from:'pmptestmail777@gmail.com',
       to: externalReceiverEmail,
