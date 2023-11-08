@@ -4,12 +4,37 @@
     background: var(--inverted-bg-color);
     display: flex;
     align-items: center;
-    padding: 20px;
+    font-size: var(--font-size-m);
+    font-weight: 600;
+    line-height: var(--font-line-m);
+    gap: 24px;
+    justify-content: space-between
+}
+
+.linkWrapper {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.rightWrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.iconsWrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .links,
 .actions {
     margin-left: auto;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
 }
 
 .mainLink {

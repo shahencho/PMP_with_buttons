@@ -8,11 +8,7 @@ function App() {
     return (
         <div className={classNames('app', {}, [])}>
             <Suspense fallback="">
-                <Navbar />
-                <div className="content-page">
-                    <Sidebar />
-                    <AppRouter />
-                </div>
+                <AppRouter />
             </Suspense>
         </div>
     );

@@ -1,6 +1,7 @@
 @import "reset";
-@import "variables/global";
-@import "themes/default";
+@import "global";
+@import "default";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap');
 
 .app,
 .app_modal {
@@ -13,6 +14,3 @@
     min-height: 100vh;
 }
 
-.content-page {
-    display: flex;
-}
