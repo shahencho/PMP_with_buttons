@@ -8,12 +8,12 @@ export class ExternalMessages {
   }
 
   async sendMessage(dto: MessagesDto) {
-    const { externalReceiverEmail } = dto;
-    console.log(externalReceiverEmail);
+    console.log(dto.externalReceiverEmail);
+    // const { externalReceiverEmail } = dto;
     const sentEmail = await this.mailService.sendMail({
       from:'pmptestmail777@gmail.com',
-      to: externalReceiverEmail,
-      subject: 'Good Job V2 ✔',
+      to: 'karoxa98@gmail.com',
+      subject: 'Good Job V3 ✔',
       text: 'new message 2',
     });
     return sentEmail;

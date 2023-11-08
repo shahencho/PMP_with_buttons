@@ -4,6 +4,7 @@ import { Module } from '@nestjs/common';
 import { MessagesModule } from './messages/messages.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { MailerModule } from '@nestjs-modules/mailer';
+import { UsersModule } from './users/users.module';
 @Module({
   imports: [
     MongooseModule.forRoot('mongodb://admin:admin@localhost:27017'),
@@ -19,6 +20,7 @@ import { MailerModule } from '@nestjs-modules/mailer';
         },
       },
     }),
+    UsersModule,
   ],
   controllers: [],
   providers: [],
