@@ -7,6 +7,30 @@
     font-size: var(--font-size-l);
 }
 
-.list {
-    margin-top: 30px;
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
+
+.paginationSection {
+    display: flex;
+    gap: 10px;
+    max-width: 200px;
+}   
+
+.pagination {
+    display: flex;
+    padding: 8px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    background: var(--card-bg);
+}
+
+.headerSection {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+

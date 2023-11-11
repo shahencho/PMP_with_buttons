@@ -6,22 +6,35 @@
     line-height: var(--font-line-m);
     gap: 20px;
     height: 200px;
+    justify-content: space-between;
 }
 
 .category {
     display: flex;
-    gap: 20px;
     flex-direction: column;
-    width: 100%;
+    align-items: center;
+    width: 180px;
+    height: 180px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--card-bg);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .categoryName {
-
+    display: flex;
 }
 
 .categoryImage {
-    width: 140px;
+    // width: 100%;
     height: 105px;
-    background-size: cover;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
