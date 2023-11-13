@@ -1,6 +1,7 @@
 import { classNames } from 'utils/classNames';
 import { memo } from 'react';
 import { Categories } from 'entities/Categories';
+import { InfluencersContainer } from 'entities/Influencers';
 import cls from './InfluencersPage.module.scss';
 
 interface InfluencersPageProps {
@@ -28,6 +29,7 @@ const InfluencersPage = (props: InfluencersPageProps) => {
                     </div>
                 </div>
                 <Categories />
+                <InfluencersContainer />
             </div>
         </div>
     );
