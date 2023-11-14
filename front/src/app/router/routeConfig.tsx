@@ -1,5 +1,6 @@
 import { RouteProps } from 'react-router-dom';
 import { InfluencersPage } from 'pages/InfluencersPage';
+import { InfluencerPage } from 'pages/InfluencerPage';
 import { NotFoundPage } from 'pages/NotFoundPage';
 
 export enum AppRoutes {
@@ -23,7 +24,7 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
     },
     [AppRoutes.INFLUENCER]: {
         path: `${RoutePath.influencer_details}:id`,
-        element: <InfluencersPage />,
+        element: <InfluencerPage />,
     },
     // last
     [AppRoutes.NOT_FOUND]: {

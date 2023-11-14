@@ -1,0 +1,42 @@
+.InfluencerPage {
+    height: 100%;;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 100%;
+    margin: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.wrapper {
+    display: flex;
+    column-gap: 30px;
+}
+
+.influencerInfo {
+    display: flex;
+    flex-basis: 50%;
+}
+
+.detailedInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    padding: 20px;
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+.card > p {
+    font-weight: 400;
+    color: var(--grey);
+}
+

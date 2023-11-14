@@ -22,6 +22,21 @@ const AppRouterImp = () => (
             />
         </Route>
         <Route
+            key={routeConfig.influencer_details.path}
+            path={routeConfig.influencer_details.path}
+            element={<Layout navbar />}
+        >
+            <Route
+                key={routeConfig.influencer_details.path}
+                path={routeConfig.influencer_details.path}
+                element={(
+                    <Suspense fallback="Загрузка">
+                        {routeConfig.influencer_details.element}
+                    </Suspense>
+                )}
+            />
+        </Route>
+        <Route
             key={routeConfig.not_found.path}
             path={routeConfig.not_found.path}
             element={(

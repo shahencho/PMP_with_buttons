@@ -1,7 +1,7 @@
 import { classNames } from 'utils/classNames';
 import { memo } from 'react';
+import { Breadcrumb } from 'widgets/Breadcrumb';
 import cls from './Sidebar.module.scss';
-import { Breadcrumb } from '../../Breadcrumb';
 import { Filters } from '../../Filters';
 
 interface SidebarProps {

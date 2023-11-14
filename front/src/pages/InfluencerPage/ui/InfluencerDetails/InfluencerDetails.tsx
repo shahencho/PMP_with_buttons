@@ -1,9 +1,8 @@
 import { classNames } from 'utils/classNames';
 import userImage from 'assets/images/user.jpg';
-import { Link } from 'react-router-dom';
-import cls from './Influencer.module.scss';
+import cls from './InfluencerDetails.module.scss';
 
-interface InfluencerProps {
+interface InfluencerDetailsProps {
     className?: string;
     [x: string]: any;
 }
@@ -17,7 +16,7 @@ const charitySvg = (
     </svg>
 );
 
-export const Influencer = (props: InfluencerProps) => {
+export const InfluencerDetails = (props: InfluencerDetailsProps) => {
     const {
         className,
         userName,
@@ -29,7 +28,7 @@ export const Influencer = (props: InfluencerProps) => {
         image,
     } = props;
     return (
-        <Link to="1" className={classNames(cls.Influencer, {}, [className])}>
+        <div className={classNames(cls.InfluencerDetails, {}, [className])}>
             <div className={cls.wrapper}>
                 <div className={cls.imageContainer}>
                     <img alt="" className={cls.influencerImage} src={image ?? userImage} />
@@ -72,6 +71,6 @@ export const Influencer = (props: InfluencerProps) => {
                     </div>
                 </div>
             </div>
-        </Link>
+        </div>
     );
 };
