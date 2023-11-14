@@ -12,6 +12,11 @@
     margin-bottom: 70px;
 }
 
+.link {
+   color: var(--primary-color); 
+   text-decoration: none,
+}
+
 .linkWrapper {
     display: flex;
     align-items: center;

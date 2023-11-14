@@ -1,6 +1,7 @@
 import { classNames } from 'utils/classNames';
 import { memo } from 'react';
 import { Search } from 'components/Search';
+import { Link } from 'react-router-dom';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -10,10 +11,10 @@ interface NavbarProps {
 export const Navbar = memo(({ className }: NavbarProps) => (
     <header className={classNames(cls.Navbar, {}, [className])}>
         <div className={cls.linkWrapper}>
-            <div className={cls.link}>Categories</div>
-            <div className={cls.link}>About us</div>
-            <div className={cls.link}>How it works</div>
-            <div className={cls.link}>Registration as a influencer</div>
+            <Link className={cls.link} to="/categories">Categories</Link>
+            <Link className={cls.link} to="/about">About us</Link>
+            <Link className={cls.link} to="/howitworks">How it works</Link>
+            <Link className={cls.link} to="/registration">Registration as a influencer</Link>
         </div>
         <div className={cls.rightWrapper}>
             <Search />

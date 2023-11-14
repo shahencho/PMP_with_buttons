@@ -37,7 +37,6 @@ export const Influencer = (props: InfluencerProps) => {
                             <path fillRule="evenodd" clipRule="evenodd" d="M12 6.80335C10.2006 4.70634 7.19377 4.05826 4.93923 5.9785C2.68468 7.89874 2.36727 11.1093 4.13778 13.3804C5.60984 15.2686 10.0648 19.2511 11.5249 20.54C11.6882 20.6842 11.7699 20.7563 11.8652 20.7847C11.9483 20.8094 12.0393 20.8094 12.1225 20.7847C12.2178 20.7563 12.2994 20.6842 12.4628 20.54C13.9229 19.2511 18.3778 15.2686 19.8499 13.3804C21.6204 11.1093 21.3417 7.87854 19.0484 5.9785C16.7551 4.07846 13.7994 4.70634 12 6.80335Z" stroke="#4318FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                     </div>
-
                 </div>
                 <div className={cls.detailedInfos}>
                     <div className={cls.userName}>Arto Minasyan</div>
