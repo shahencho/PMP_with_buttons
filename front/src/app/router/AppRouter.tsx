@@ -1,38 +1,51 @@
-import  { memo, Suspense, useCallback } from 'react';
-import { Routes, Route } from "react-router-dom";
-import { RouteProps } from 'react-router-dom';
+import { memo, Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
 
-import { routeConfig } from './routeConfig';
 import { Layout } from 'widgets/Layout';
+import { routeConfig } from './routeConfig';
 
-
-const AppRouterImp = () => {
-
-
-    return (
-        <Routes>
+const AppRouterImp = () => (
+    <Routes>
+        <Route
+            key={routeConfig.influencers.path}
+            path={routeConfig.influencers.path}
+            element={<Layout sidebar navbar />}
+        >
             <Route
                 key={routeConfig.influencers.path}
                 path={routeConfig.influencers.path}
-                element={<Layout sidebar={true} navbar={true} />}
-            >
-            <Route
-                key={routeConfig.influencers.path}
-                path={routeConfig.influencers.path}
-                element={<Suspense fallback={"Загрузка"}>
-                    {routeConfig.influencers.element}
-                </Suspense>}
+                element={(
+                    <Suspense fallback="Загрузка">
+                        {routeConfig.influencers.element}
+                    </Suspense>
+                )}
             />
-            </Route>
+        </Route>
+        <Route
+            key={routeConfig.influencer_details.path}
+            path={routeConfig.influencer_details.path}
+            element={<Layout navbar />}
+        >
             <Route
-                key={routeConfig.not_found.path}
-                path={routeConfig.not_found.path}
-                element={<Suspense fallback={"Загрузка"}>
+                key={routeConfig.influencer_details.path}
+                path={routeConfig.influencer_details.path}
+                element={(
+                    <Suspense fallback="Загрузка">
+                        {routeConfig.influencer_details.element}
+                    </Suspense>
+                )}
+            />
+        </Route>
+        <Route
+            key={routeConfig.not_found.path}
+            path={routeConfig.not_found.path}
+            element={(
+                <Suspense fallback="Загрузка">
                     {routeConfig.not_found.element}
-                </Suspense>}
-            />
-        </Routes>
-    );
-};
+                </Suspense>
+            )}
+        />
+    </Routes>
+);
 
 export const AppRouter = memo(AppRouterImp);
