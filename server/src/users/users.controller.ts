@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Res } from '@nestjs/common';
 import { UsersDto } from './dtos/users.dto';
 import { UsersService } from './users.service';
 
@@ -11,13 +11,18 @@ export class UsersController {
     return this.usersService.createUser(dto);
   }
 
-  @Get('getById')
-  async getUserById(@Param() id:string) {
+  @Get('getById/:id')
+  async getUserById(@Param('id') id:string) {
     return this.usersService.getUserById(id);
   }
 
   @Get('getAll')
   async getUsers() {
     return this.usersService.getUsers();
+  }
+
+  @Get('img/:imagename')
+  getImage(@Param('imagename') image, @Res() res) {
+    return res.sendFile(image, { root: './uploads' });
   }
 }

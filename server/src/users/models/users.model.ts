@@ -35,6 +35,9 @@ export class UsersModel {
   @Prop()
     responseTime: string;
 
+  @Prop()
+    image: string;
+
 }
 
 export const UsersModelModelSchema = SchemaFactory.createForClass(UsersModel);
