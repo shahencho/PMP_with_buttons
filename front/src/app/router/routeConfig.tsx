@@ -2,8 +2,10 @@ import { RouteProps } from 'react-router-dom';
 import { InfluencersPage } from 'pages/InfluencersPage';
 import { InfluencerPage } from 'pages/InfluencerPage';
 import { NotFoundPage } from 'pages/NotFoundPage';
+import { MainPage } from 'pages/MainPage';
 
 export enum AppRoutes {
+    MAIN = 'main',
     INFLUENCERS = 'influencers',
     INFLUENCER = 'influencer_details',
     // last
@@ -11,6 +13,7 @@ export enum AppRoutes {
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
+    [AppRoutes.MAIN]: '/',
     [AppRoutes.INFLUENCERS]: '/influencers',
     [AppRoutes.INFLUENCER]: '/influencers/',
     // последний
@@ -18,6 +21,10 @@ export const RoutePath: Record<AppRoutes, string> = {
 };
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
+    [AppRoutes.MAIN]: {
+        path: RoutePath.main,
+        element: <MainPage />,
+    },
     [AppRoutes.INFLUENCERS]: {
         path: RoutePath.influencers,
         element: <InfluencersPage />,
