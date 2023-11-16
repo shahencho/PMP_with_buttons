@@ -11,7 +11,7 @@ interface NavbarProps {
 export const Navbar = memo(({ className }: NavbarProps) => (
     <header className={classNames(cls.Navbar, {}, [className])}>
         <div className={cls.linkWrapper}>
-            <Link className={cls.link} to="/categories">Categories</Link>
+            <Link className={cls.link} to="/influencers">Categories</Link>
             <Link className={cls.link} to="/about">About us</Link>
             <Link className={cls.link} to="/howitworks">How it works</Link>
             <Link className={cls.link} to="/registration">Registration as a influencer</Link>

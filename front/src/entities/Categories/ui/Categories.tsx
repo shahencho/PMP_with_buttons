@@ -52,13 +52,5 @@ export const Categories = memo(({ className }: CategoriesProps) => (
                 <div className={cls.categoryName}>Sports</div>
             </div>
         </div>
-        <div className={cls.category}>
-            <div className={cls.wrapper}>
-                <div className={cls.imageContainer}>
-                    <img alt="" className={cls.categoryImage} src={sportImage} />
-                </div>
-                <div className={cls.categoryName}>Sports</div>
-            </div>
-        </div>
     </div>
 ));

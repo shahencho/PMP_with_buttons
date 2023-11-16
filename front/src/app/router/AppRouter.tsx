@@ -5,7 +5,23 @@ import { Layout } from 'widgets/Layout';
 import { routeConfig } from './routeConfig';
 
 const AppRouterImp = () => (
+
     <Routes>
+        <Route
+            key={routeConfig.main.path}
+            path={routeConfig.main.path}
+            element={<Layout navbar />}
+        >
+            <Route
+                key={routeConfig.main.path}
+                path={routeConfig.main.path}
+                element={(
+                    <Suspense fallback="Загрузка">
+                        {routeConfig.main.element}
+                    </Suspense>
+                )}
+            />
+        </Route>
         <Route
             key={routeConfig.influencers.path}
             path={routeConfig.influencers.path}
