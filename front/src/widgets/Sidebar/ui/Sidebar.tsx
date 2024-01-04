@@ -13,7 +13,7 @@ export const Sidebar = memo(({ className }: SidebarProps) => (
         className={classNames(cls.Sidebar, {}, [className])}
     >
         <div className={cls.container}>
-            <div className={cls.appName}><h2>PaidEmail</h2></div>
+            <div className={cls.appName}><h2>Primess</h2></div>
             <Breadcrumb />
             <Filters />
         </div>

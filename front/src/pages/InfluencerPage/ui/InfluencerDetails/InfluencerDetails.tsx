@@ -1,6 +1,8 @@
 import { classNames } from 'utils/classNames';
 import userImage from 'assets/images/user.jpg';
 import cls from './InfluencerDetails.module.scss';
+import { useState } from 'react';
+import axios from 'axios';
 
 interface InfluencerDetailsProps {
     className?: string;
@@ -27,6 +29,50 @@ export const InfluencerDetails = (props: InfluencerDetailsProps) => {
         responseRate,
         image,
     } = props;
+
+
+    const [input1, setInput1] = useState('');
+    const [input2, setInput2] = useState('');
+    const [input3, setInput3] = useState('');
+
+    // const handleButtonClick = () => {
+    //     // Navigate to the home page
+    //     console.log("just button")
+    // };
+
+    const handleButtonClick = async () => {
+        try {
+            const response = await axios.post('http://localhost:3001/messages/create', {
+                senderEmail: 'pmptestmail777@gmail.com',
+                receiverEmail: 'resEmailTest1@mail.ru',
+                externalReceiverEmail: input3,
+                topic: input1,
+                sentText: input2,
+                receivedText: input3,
+                subj:input2,
+                price: 1,
+                shelfLife: '23.08.2023',
+                isActual: true,
+            });
+
+            // Handle the response as needed
+            console.log('Response from server:', response.data);
+
+       
+        } catch (error) {
+            // Handle errors
+            console.error('Error while sending request:', error);
+        }
+    };
+
+
+
+
+
+
+
+
+ 
     return (
         <div className={classNames(cls.InfluencerDetails, {}, [className])}>
             <div className={cls.wrapper}>
@@ -69,6 +115,44 @@ export const InfluencerDetails = (props: InfluencerDetailsProps) => {
                         <span className={cls.detail}>Response Time</span>
                         <span>{responseTime}</span>
                     </div>
+                    {/* ppppp */}
+                    
+             <div className={cls.inputContainer}>
+                <input
+                    type="text"
+                    placeholder="Input 1"
+                    value={input1}
+                    onChange={(e) => setInput1(e.target.value)}
+                />
+                <input
+                    type="text"
+                    placeholder="Input 2"
+                    value={input2}
+                    onChange={(e) => setInput2(e.target.value)}
+                />
+                <input
+                    type="text"
+                    placeholder="Input 3"
+                    value={input3}
+                    onChange={(e) => setInput3(e.target.value)}
+                />
+            </div>
+
+                        
+                   
+
+
+
+                    <div>
+                        {/* Added Button */}
+                            <button className={cls.customButton} onClick={() => handleButtonClick()}>
+                                Click Me
+                            </button>
+
+                            {/* ... (rest of the code) */}
+                    </div>
+
+
                 </div>
             </div>
         </div>

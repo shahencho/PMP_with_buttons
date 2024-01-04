@@ -22,6 +22,9 @@ export class MessagesModel {
     sentText: string;
 
   @Prop()
+    subj: string;
+
+  @Prop()
     receivedText: string | null;
 
   @Prop({ required: true })
