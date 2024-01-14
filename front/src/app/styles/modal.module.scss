@@ -1,0 +1,168 @@
+/* modal.module.scss */
+
+// .modal {
+//     background-color: #aff;
+
+
+// }
+
+// .overlay{
+
+//     background-color: #faf;
+// }
+
+// .Search {
+//     width: 100%;
+//     height: 40px;
+//     border-radius: 40px;
+//     padding: 16px;
+//     background: var(--input-bg);
+//     display: flex;
+//     align-items: center;
+//     font-size: var(--font-size-m);
+//     font-weight: 600;
+//     line-height: var(--font-line-m);
+//     gap: 16px;
+// }
+// .name {
+//     font-size: 16px;
+//     font-weight: 500;
+//     line-height: 24px; 
+//     color: var(--grey);
+// }
+
+
+.modal {
+    /* Styles for the modal container */
+    position: fixed;
+    top: 10%;
+    left: 20%;
+    right: 20%;
+    bottom: 5%;
+  
+    /* Add padding for better appearance */
+    padding: 20px;
+  
+    /* Specify the maximum width if needed */
+    max-width: 90%;
+    
+    /* Specify the maximum height if needed */
+    max-height: 90%;
+  
+    /* Set background color and border radius */
+    background-color: #d7e5fd;
+    border-radius: 8px;
+    /*shahen updated from Search UI */
+    // background: var(--input-bg);
+    // display: flex;
+    // align-items: center;
+    font-size: var(--font-size-m);
+    font-weight: 600;
+    line-height: var(--font-line-m);
+    // gap: 16px;
+
+
+
+  }
+  
+  .overlay {
+    /* Styles for the overlay/background behind the modal */
+    background-color: rgba(149, 199, 73, 0.675);
+  }
+  
+  .dropdown {
+    /* Styles for the dropdown */
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    font-size: var(--font-size-m);
+    font-weight: 600;
+    line-height: var(--font-line-m);
+    gap: 16px;
+  }
+  
+  .modalInput {
+    /* Styles for input and textarea container */
+    margin-bottom: 16px;
+    font-size: var(--font-size-m);
+    font-weight: 600;
+    line-height: var(--font-line-m);
+    gap: 16px;
+  
+    label {
+      /* Styles for the label */
+      display: block;
+      margin-bottom: 8px;
+    }
+  
+    input
+     {
+      /* Styles for input and textarea */
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-top: 4px;
+      margin-bottom: 8px;
+    }
+
+    textarea{
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #6e2828;
+      border-radius: 4px;
+      margin-top: 4px;
+      margin-bottom: 8px;
+      font-size: var(--font-size-m);
+    }
+
+
+
+
+  }
+  
+  .payButton {
+    /* Styles for the pay button */
+    background-color: #4318FF;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .link {
+    /* Styles for the link */
+    color: #4318FF;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+
+
+/* modal.module.scss */
+
+.modal {
+    /* ... (existing modal styles) */
+
+    .headerContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .totalPrice {
+        font-size: 16px; /* Adjust as needed */
+        color: #228799; /* Adjust the color as needed */
+    }
+
+    .responseText {
+        font-size: 14px;
+        color: #A3AED0;
+        margin-bottom: 10px; /* Adjust as needed */
+    }
+
+    /* ... (other existing modal styles) */
+}
+
+

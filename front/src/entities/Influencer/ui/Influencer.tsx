@@ -29,7 +29,7 @@ export const Influencer = (props: InfluencerProps) => {
         image,
     } = props;
     return (
-        <Link to="1" className={classNames(cls.Influencer, {}, [className])}>
+        <Link to="2" className={classNames(cls.Influencer, {}, [className])}>
             <div className={cls.wrapper}>
                 <div className={cls.imageContainer}>
                     <img alt="" className={cls.influencerImage} src={image ?? userImage} />

@@ -14,7 +14,7 @@ interface InfluencerPageProps {
 const InfluencerPage = (props: InfluencerPageProps) => {
     const { className } = props;
     const influencer = {
-        userName: 'Arto Minasyan',
+        userName: 'Arto Minasyan11',
         profession: 'Co-Founder at Krisp & 10Web',
         charity: '1,750$',
         receivedMessages: 23,

@@ -92,7 +92,11 @@ export const Filters = memo(({ className }: FiltersProps) => (
 
             <Slider defaultValue={[30, 70]} sx={{ color: '#A3AED0' }} />
         </div>
-        <div className={cls.divide} />
+        {/* <div className={cls.divide} /> */}
+
+     
+
+
         <div className={cls.wrapper}>
             <div className={cls.filterName}>
                 Response time

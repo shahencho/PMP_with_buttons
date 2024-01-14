@@ -15,6 +15,7 @@ export const Navbar = memo(({ className }: NavbarProps) => (
             <Link className={cls.link} to="/about">About us</Link>
             <Link className={cls.link} to="/howitworks">How it works</Link>
             <Link className={cls.link} to="/registration">Registration as a influencer</Link>
+            {/* <Link className={cls.link} to="/registration">My link  as a influencer</Link> */}
         </div>
         <div className={cls.rightWrapper}>
             <Search />
