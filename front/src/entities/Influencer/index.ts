@@ -1,5 +1,3 @@
-import { Influencer } from './ui/Influencer';
+import { Influencer } from "./ui/Influencer";
 
-export {
-    Influencer,
-};
+export { Influencer };

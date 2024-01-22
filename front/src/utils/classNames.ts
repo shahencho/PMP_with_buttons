@@ -1,3 +1,5 @@
+// E:\PMP_new\pmp\front\src\utils\classNames.ts
+
 export type Mods = Record<string, boolean | string | undefined>
 
 export function classNames(
