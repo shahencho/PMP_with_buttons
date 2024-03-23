@@ -1,5 +1,3 @@
-// InfluencerPage.tsx
-
 import React, { memo } from "react";
 import { useParams } from "react-router-dom";
 import { classNames } from "utils/classNames";
@@ -17,17 +15,14 @@ interface InfluencerPageProps {
 const InfluencerPage: React.FC<InfluencerPageProps> = ({ className }) => {
   const { name_from_url } = useParams<{ name_from_url?: string }>();
 
-  // Attempt to find the influencer based on the URL parameter
-  const influencer_name = influencersData.find(
-    (inf) => decodeURIComponent(name_from_url || "") === inf.userName
+  // Use `decodeURIComponent` to ensure the URL parameter is correctly interpreted
+  const influencer = influencersData.find(
+    (inf) => inf.userName === decodeURIComponent(name_from_url || "")
   );
 
-  if (!influencer_name) {
+  if (!influencer) {
     return <div>Influencer not found.</div>;
   }
-
-  // Proceed to use `influencer_name` directly in your component
-  // No need to redefine the `influencer` object here unless you're transforming data
 
   return (
     <div className={classNames(cls.InfluencerPage, {}, [className])}>
@@ -35,16 +30,18 @@ const InfluencerPage: React.FC<InfluencerPageProps> = ({ className }) => {
         <Breadcrumb />
         <div className={cls.wrapper}>
           <div className={cls.influencerInfo}>
-            {/* Pass the found influencer object directly to `InfluencerDetails` */}
-            <InfluencerDetails {...influencer_name} />
+            {/* Pass the entire influencer object as props */}
+            <InfluencerDetails {...influencer} />
           </div>
           <div className={cls.detailedInfo}>
+            {/* Use the actual data from the found influencer object */}
             <div className={cls.card}>
-              {/* Use the influencer's userName from the found object */}
-              <h3> {influencer_name.userName}</h3>
+              <h3>{influencer.userName}</h3>
               <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry...
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book.
               </p>
             </div>
             <div className={cls.card}>

@@ -1,3 +1,5 @@
+// E:\PMP_new\pmp\front\src\pages\InfluencersPage\ui\InfluencersPage.tsx
+
 import { classNames } from "utils/classNames";
 import { memo } from "react";
 import { Categories } from "entities/Categories";

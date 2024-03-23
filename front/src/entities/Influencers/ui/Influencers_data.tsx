@@ -1,3 +1,4 @@
+// E:\PMP_new\pmp\front\src\entities\Influencers\ui\Influencers_data.tsx
 // Influencers_data.ts
 export interface Influencer {
   userName: string;

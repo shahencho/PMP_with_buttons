@@ -67,24 +67,18 @@ export const InfluencerDetails = (props: InfluencerDetailsProps) => {
     image,
   } = props;
 
-  const handleSelectInfluencer = (userName: string) => {
-    // Do something with the selected influencer's name
-    console.log(`Selected Influencer oooooooooo: ${userName}`);
-    // You can pass this information to InfluencerDetails.tsx as needed
-  };
-
   const imagePath = getAssetPath(image);
-  console.log(
-    "\frontsrcpagesInfluencerPagenfluencerDetailsnfluencerDetails.tsx ",
-    className
-  ); // Add this line to log the image path
+  // console.log(
+  //   "\frontsrcpagesInfluencerPagenfluencerDetailsnfluencerDetails.tsx ",
+  //   className
+  // ); // Add this line to log the image path
 
-  const { name }: { name?: string } = useParams();
+  // const { name }: { name?: string } = useParams();
 
-  useEffect(() => {
-    // Do something with the influencer's name (e.g., log it)
-    console.log("Influencer's name from URL:", name);
-  }, [name]);
+  // useEffect(() => {
+  //   // Do something with the influencer's name (e.g., log it)
+  //   console.log("Influencer's name from URL:", name);
+  // }, [name]);
 
   const [isModalOpen, setModalOpen] = useState(false);
 
@@ -127,9 +121,14 @@ export const InfluencerDetails = (props: InfluencerDetailsProps) => {
           <div className={cls.charity}>
             {charitySvg}
             <span className={cls.charityWord}>Charity</span>
-            <span className={cls.charityAmount}>1,75000$</span>
+            <span className={cls.charityAmount}>{charity}</span>
           </div>
         </div>
+
+        <div className={cls.detailedInfos}>
+          <span className={cls.charityWord}>Charityaaaaaaaaaa</span>
+        </div>
+
         <div className={cls.detailedInfos}>
           {/* Button to open modal */}
           <button className={cls.customButton} onClick={openModal}>

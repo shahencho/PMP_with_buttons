@@ -85,7 +85,7 @@ const influencersData: InfluencerList = [
     userName: "Artavazd Yeghiazaryan",
     profession: "Երևան ամսագիր • evnmag",
     charity: "1,000$",
-    receivedMessages: 10,
+    receivedMessages: 1000,
     responseRate: "90%",
     responseTime: "172hr",
     infl_private_email: "shahen.grigoryan@gmail.com",
@@ -93,7 +93,7 @@ const influencersData: InfluencerList = [
   },
   {
     userName: "Valodik Minasyan",
-    profession: "Co-Founder at Krisp & 10Web",
+    profession: "Valodik& 10Web",
     charity: "21,750$",
     receivedMessages: 223,
     responseRate: "288%",
@@ -104,14 +104,26 @@ const influencersData: InfluencerList = [
   {
     userName: "Alex  Minasyan",
     profession: "Co-Founder at Krisp & 10Web",
-    charity: "1,75330$",
+    charity: "17,5330$",
     receivedMessages: 23,
     responseRate: "88%",
     responseTime: "72hr",
     infl_private_email: "Alex@gmail.com",
     image: "Ar_YEghiaz.jpg",
   },
+  {
+    userName: "Alex  Minasyan2",
+    profession: "Co-Founder at2 Krisp & 10Web",
+    charity: "17,533$",
+    receivedMessages: 223,
+    responseRate: "8%",
+    responseTime: "2hr",
+    infl_private_email: "Alex@gmail.com",
+    image: "Ar_YEghiaz.jpg",
+  },
 ];
+
+export { influencersData };
 
 export const InfluencersContainer = () => (
   <Influencers influencersData={influencersData} />

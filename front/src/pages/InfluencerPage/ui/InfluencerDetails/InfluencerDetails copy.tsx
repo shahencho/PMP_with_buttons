@@ -74,17 +74,17 @@ export const InfluencerDetails = (props: InfluencerDetailsProps) => {
   };
 
   const imagePath = getAssetPath(image);
-  console.log(
-    "\frontsrcpagesInfluencerPagenfluencerDetailsnfluencerDetails.tsx ",
-    className
-  ); // Add this line to log the image path
+  // console.log(
+  //   "\frontsrcpagesInfluencerPagenfluencerDetailsnfluencerDetails.tsx ",
+  //   className
+  // ); // Add this line to log the image path
 
-  const { name }: { name?: string } = useParams();
+  // const { name }: { name?: string } = useParams();
 
-  useEffect(() => {
-    // Do something with the influencer's name (e.g., log it)
-    console.log("Influencer's name from URL:", name);
-  }, [name]);
+  // useEffect(() => {
+  //   // Do something with the influencer's name (e.g., log it)
+  //   console.log("Influencer's name from URL:", name);
+  // }, [name]);
 
   const [isModalOpen, setModalOpen] = useState(false);
 

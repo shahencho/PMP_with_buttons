@@ -2,11 +2,11 @@
 
 import { classNames } from "utils/classNames";
 import userImage from "assets/images/user.jpg";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import cls from "./Influencer.module.scss";
 
 import { getAssetPath } from "utils"; // Import a utility function to generate the asset path
-// ...
+import { Link, LinkProps } from "react-router-dom";
 
 interface InfluencerProps {
   className?: string;
@@ -57,10 +57,11 @@ export const Influencer = (props: InfluencerProps) => {
     className,
     userName,
     profession,
-    receivedMessages,
     charity,
-    responseTime,
+    receivedMessages,
     responseRate,
+    responseTime,
+    infl_private_email,
     image,
   } = props;
 
@@ -71,9 +72,19 @@ export const Influencer = (props: InfluencerProps) => {
   console.log("influencer.tsx: -> className:", className); // Add this line to log the image path
   console.log("influencer.tsx: -> User name - >>> :", userName); // Add this line to log the image path
 
+  interface CustomLinkProps extends LinkProps {
+    to: {
+      pathname: string;
+      state: {
+        username1: number;
+      };
+    };
+  }
+
   return (
     // <Link to="2" className={classNames(cls.Influencer, {}, [className])}>
     // <Link to="2" className={classNames(cls.Influencer, {}, [className])}>
+
     <Link
       to={`/influencers/${userName}`}
       className={classNames(cls.Influencer, {}, [className])}
@@ -112,7 +123,8 @@ export const Influencer = (props: InfluencerProps) => {
           <div className={cls.profession}>{profession}</div>
           <div className={cls.charity}>
             {charitySvg}
-            <span className={cls.charityWord}>Charity</span>
+            <span className={cls.charityWord}>Charity </span>
+
             <span className={cls.charityAmount}>{charity}</span>
           </div>
         </div>
@@ -155,6 +167,7 @@ export const Influencer = (props: InfluencerProps) => {
             <span className={cls.detail}>Response Rate</span>
             <span>{responseRate}</span>
           </div>
+
           <div className={cls.detailedInfo}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
